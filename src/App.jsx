@@ -1,5 +1,6 @@
 import Banner from "./components/Banner";
 import Brands from "./components/Brands";
+import Fast from "./components/Fast";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Holiday from "./components/Holiday";
@@ -17,6 +18,7 @@ const App = () => {
       <ViewPackages />
       <Holiday />
       <Trending />
+      <Fast />
       <Banner />
       <Teestimonials />
       <Footer />
