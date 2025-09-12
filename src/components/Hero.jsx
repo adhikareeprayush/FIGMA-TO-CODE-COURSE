@@ -4,19 +4,51 @@ import curve from "../assets/curve.svg";
 import Button from "./Button";
 import Circle from "./Circle";
 import BottomCircle from "./BottomCircle";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { useState } from "react";
 
 const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="h-screen w-full relative overflow-hidden">
       <Nav />
-      <img
-        src={heroImage}
-        className="h-full w-full object-cover brightness-50"
-      />
-      <div className="flex items-center justify-center gap-4 absolute transform bottom-10 left-1/2 -translate-x-1/2">
-        <div className="h-[5px] w-[100px] bg-white rounded-full"></div>
-        <div className="h-[5px] w-[100px] bg-primary rounded-full"></div>
-        <div className="h-[5px] w-[100px] bg-white rounded-full"></div>
+      <Swiper
+        slidesPerView={1}
+        loop
+        autoplay={{ delay: 5000 }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        modules={[Autoplay]}
+      >
+        <SwiperSlide>
+          <img
+            src={heroImage}
+            className="h-full w-full object-cover brightness-50"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={heroImage}
+            className="h-full w-full object-cover brightness-50"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={heroImage}
+            className="h-full w-full object-cover brightness-50"
+          />
+        </SwiperSlide>
+      </Swiper>
+
+      <div className="flex items-center justify-center gap-4 absolute transform bottom-10 left-1/2 -translate-x-1/2 z-20">
+        {[0, 1, 2].map((index) => (
+          <div
+            key={index}
+            className={`h-[5px] w-[100px] rounded-full ${
+              activeIndex == index ? "bg-primary" : "bg-white"
+            }`}
+          />
+        ))}
       </div>
       <div className="flex flex-col gap-4 absolute z-10 transform top-1/2 -translate-y-1/2 pl-[200px]">
         <img src={curve} alt="" className="w-[80px]" />

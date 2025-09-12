@@ -4,11 +4,12 @@ import image0 from "../assets/packages/0.jpg";
 import image1 from "../assets/packages/1.jpg";
 import image2 from "../assets/packages/2.jpg";
 import Button from "./Button";
+import Section from "./Section";
 
 const ViewPackages = () => {
   return (
-    <div className="flex w-full px-[200px] py-14 justify-between items-center">
-      <div className="relative w-[400px] ">
+    <Section classname="grid grid-cols-1 lg:flex w-full justify-start gap-20 items-center">
+      <div className="relative w-[400px] col-span-1">
         <div className="-z-10 left-[15px] h-[610px] w-[350px] rounded-t-full border-2 border-[#a7327a] absolute bottom-0 "></div>
         <img
           src={innerImage}
@@ -39,7 +40,7 @@ const ViewPackages = () => {
           className=" h-[50px] w-[50px] rounded-full absolute object-cover -top-[20px] left-[120px]"
         />
       </div>
-      <div className="flex flex-col gap-[20px] w-[500px] jutify-center h-full jsutify-center">
+      <div className="col-span-1 flex flex-col gap-[20px] w-[500px] jutify-center h-full jsutify-center">
         <span className="font-semibold font-poppins text-[18px] text-primary uppercase">
           Honeymoon Specials
         </span>
@@ -54,7 +55,7 @@ const ViewPackages = () => {
         </p>
         <Button name={"View Packages"} classname="w-fit" />
       </div>
-    </div>
+    </Section>
   );
 };
 

@@ -1,7 +1,7 @@
 const ServicesCard = ({ img, title, desc, type = 1 }) => {
   return (
     <div
-      className={`flex flex-col gap-4 w-[220px] h-[260px] items-center justify-center relative ${
+      className={`col-span-1 flex flex-col gap-4 w-[220px] h-[260px] items-center justify-center relative ${
         type == 2 ? "rounded-[36px] services-dropShadow bg-white" : ""
       }`}
     >

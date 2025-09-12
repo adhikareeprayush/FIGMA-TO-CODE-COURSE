@@ -10,10 +10,11 @@ import plane from "../assets/fast/plane.svg";
 import img4 from "../assets/fast/img4.png";
 import img5 from "../assets/fast/img5.jpg";
 import bg from "../assets/packages/bg.svg";
+import Section from "./Section";
 
 const Fast = () => {
   return (
-    <div className="px-[200px] py-20 grid grid-cols-2 w-full">
+    <Section classname="grid 2xl:grid-cols-2 grid-cols-1 w-full 2xl:gap-0 gap-20">
       <div className="col-span-1 flex flex-col gap-5">
         <div className="flex flex-col gap-3">
           <span className="font-semibold font-poppins text-[18px] text-primary uppercase">
@@ -25,7 +26,7 @@ const Fast = () => {
         </div>
         <div className="flex flex-col gap-5">
           <div className="flex items-start gap-3">
-            <div className="bg-primary h-[48px] w-[60px] rounded-xl flex items-center justify-center">
+            <div className="bg-primary h-[48px] min-w-[54px] rounded-xl flex items-center justify-center">
               <img
                 src={img1}
                 alt=""
@@ -43,7 +44,7 @@ const Fast = () => {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <div className="bg-[#F0BB1F] h-[48px] w-[60px] rounded-xl flex items-center justify-center">
+            <div className="bg-[#F0BB1F] h-[48px] min-w-[54px] rounded-xl flex items-center justify-center">
               <img
                 src={img2}
                 alt=""
@@ -61,7 +62,7 @@ const Fast = () => {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <div className="bg-[#006380] h-[48px] w-[60px] rounded-xl flex items-center justify-center">
+            <div className="bg-[#006380] h-[48px] min-w-[54px] rounded-xl flex items-center justify-center">
               <img
                 src={img3}
                 alt=""
@@ -80,7 +81,7 @@ const Fast = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1 h-ful flex items-center justify-center">
+      <div className="col-span-1 h-full flex items-center 2xl:justify-center justify-start">
         <div className="relative">
           <div className="flex flex-col gap-3 py-4 px-5 bg-white shadow-2xl rounded-[26px] w-fit h-[400px] justify-between">
             <img
@@ -169,7 +170,7 @@ const Fast = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

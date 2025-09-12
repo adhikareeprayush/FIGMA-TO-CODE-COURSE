@@ -1,14 +1,19 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
 
 @theme {
   --color-primary: #df6951;
   --font-poppins: "Poppins";
   --font-volkhov: "Volkhov";
   --font-manrope: "Manrope";
+  --font-Yesteryear: "Yesteryear";
 }
 
 body {
   font-family: "Circular Std", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .services-dropShadow {
@@ -23,4 +28,8 @@ body {
   /* stroke: (linear-gradient(180deg, #a7327a 0%, #3b90fb 100%), #a7327a); */
   border-color: (linear-gradient(180deg, #a7327a 0%, #3b90fb 100%), #a7327a);
   /* border: #a7327a !important; */
+}
+
+.button-gradient {
+  background: linear-gradient(100deg, #ff7255 8.93%, #ba4e38 100%);
 }

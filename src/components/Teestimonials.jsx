@@ -6,7 +6,7 @@ import photo from "../assets/testimonials/photo.jpg";
 
 const Teestimonials = () => {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center h-[600px] overflow-hidden">
+    <div className="relative w-full flex flex-col items-center justify-center h-[620px] overflow-hidden">
       <img
         src={bg}
         alt=""
