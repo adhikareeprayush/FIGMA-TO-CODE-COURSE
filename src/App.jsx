@@ -1,9 +1,9 @@
 import Landing from "./components/layout/Landing";
-import About from "./pages/About";
+import TourInfo from "./pages/TourInfo";
 const App = () => {
   return (
     <Landing>
-      <About />
+      <TourInfo />
     </Landing>
   );
 };
