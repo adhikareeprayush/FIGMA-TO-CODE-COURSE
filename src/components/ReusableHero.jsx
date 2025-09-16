@@ -1,7 +1,7 @@
 import heroImg from "../assets/about/hero.jpg";
 const ReusableHero = (subTitle, title) => {
   return (
-    <div className="h-[80vh] relative w-full overflow-hidden">
+    <div className="h-[80vh] relative w-full overflow-hidden -z-10">
       {subTitle && title ? (
         <div className="absolute flex items-center justify-center flex-col gap-2 z-100 h-full w-full">
           <span className="font-poppins text-[18px] font-bold uppercase text-[#FFEFEC]">

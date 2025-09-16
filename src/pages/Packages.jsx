@@ -7,27 +7,28 @@ import Button from "../components/Button";
 import TourPlan from "../components/TourPlan";
 import Location from "../components/Location";
 import Gallery from "../components/Gallery";
+import PackagesContainer from "../components/PackagesContainer";
 
 const tabs = [
   {
     id: 1,
-    label: "Information",
+    label: "Date",
   },
   {
     id: 2,
-    label: "Tour Plan",
+    label: "Price Low To High",
   },
   {
     id: 3,
-    label: "Location",
+    label: "Price High to Low",
   },
   {
     id: 4,
-    label: "Gallery",
+    label: "Name (A-Z)",
   },
 ];
 
-const TourInfo = () => {
+const Packages = () => {
   const [activeMenu, setActiveMenu] = useState(1);
   const handleTabChange = (tabNumber) => {
     setActiveMenu(tabNumber);
@@ -53,7 +54,7 @@ const TourInfo = () => {
           <div className="w-full grid grid-cols-5 px-10 gap-3">
             <div className="col-span-3 flex flex-col gap-5 relative">
               {activeMenu == 1 ? (
-                <Information />
+                <PackagesContainer />
               ) : activeMenu == 2 ? (
                 <TourPlan />
               ) : activeMenu == 3 ? (
@@ -138,4 +139,4 @@ const TourInfo = () => {
   );
 };
 
-export default TourInfo;
+export default Packages;

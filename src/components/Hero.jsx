@@ -12,7 +12,6 @@ const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="h-screen w-full relative overflow-hidden">
-      <Nav />
       <Swiper
         slidesPerView={1}
         loop
