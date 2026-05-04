@@ -5,34 +5,38 @@ import messenger from "../assets/footer/logo/messenger.svg";
 import twitter from "../assets/footer/logo/twitter.svg";
 import twoo from "../assets/footer/logo/twoo.svg";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <div className="w-full overflow-hidden relative flex items-center justify-center flex-col">
+    <div className="relative w-full overflow-x-clip">
       <img
         src={footerImage}
         alt=""
-        className="absolute bottom-0 -right-[200px] h-full opacity-5 -z-10 w-[577px]"
+        className="pointer-events-none absolute bottom-0 right-0 -z-10 h-full max-h-[min(100%,640px)] w-auto max-w-[min(577px,55vw)] opacity-5"
       />
-      <div className="flex justify-between w-full px-[200px] py-20">
-        <div className="flex flex-col">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-x-10 gap-y-12 px-6 py-14 sm:px-10 md:grid-cols-2 md:gap-x-12 lg:grid-cols-4">
+        <div className="min-w-0 flex flex-col">
           <img src={logo} alt="" className="w-[120px]" />
-          <p className="font-manrope font-medium text-[#757095] text-[16px] w-[220px]">
+          <p className="mt-3 max-w-sm font-manrope text-[16px] font-medium leading-relaxed text-[#757095]">
             Travel helps companies manage payments easily.
           </p>
-          <div className="flex items-center gap-3 mt-4">
-            <img src={linkedin} alt="" className="w-[20px]" />
-            <img src={messenger} alt="" className="w-[20px]" />
-            <img src={twitter} alt="" className="w-[20px]" />
-            <img src={twoo} alt="" className="w-[20px]" />
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <img src={linkedin} alt="" className="h-5 w-5" />
+            <img src={messenger} alt="" className="h-5 w-5" />
+            <img src={twitter} alt="" className="h-5 w-5" />
+            <img src={twoo} alt="" className="h-5 w-5" />
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="min-w-0 flex flex-col gap-4">
           <h6 className="font-manrope text-[21px] font-bold text-[#181433]">
-            Comapny
+            Company
           </h6>
           <ul className="flex flex-col gap-3">
             <li className="font-manrope text-[16px] font-medium text-[#181433]">
-              About Us
+              <Link to="/about" className="hover:text-primary">
+                About Us
+              </Link>
             </li>
             <li className="font-manrope text-[16px] font-medium text-[#181433]">
               Blog
@@ -45,7 +49,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="min-w-0 flex flex-col gap-4">
           <h6 className="font-manrope text-[21px] font-bold text-[#181433]">
             Destinations
           </h6>
@@ -57,7 +61,7 @@ const Footer = () => {
               Las Vegas
             </li>
             <li className="font-manrope text-[16px] font-medium text-[#181433]">
-              Los Angelas
+              Los Angeles
             </li>
             <li className="font-manrope text-[16px] font-medium text-[#181433]">
               Toronto
@@ -65,29 +69,31 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="min-w-0 flex flex-col gap-4">
           <h6 className="font-manrope text-[21px] font-bold text-[#181433]">
             Join Our Newsletter
           </h6>
-          <div className="flex items-center h-[55px] w-[350px] bg-[#EEF] justify-between">
+          <div className="flex w-full max-w-[380px] flex-wrap items-stretch bg-[#EEF] sm:h-[55px] sm:flex-nowrap">
             <input
               type="text"
-              name=""
-              id=""
+              name="newsletter"
+              id="newsletter"
               placeholder="Enter your email"
-              className="flex-1 h-full outline-0 focus:border-0 border-0 px-3 placeholder:text-[16px] placeholder:font-manrope placeholder:text-[#181433] placeholder:opacity-20 placeholder:font-medium"
+              className="min-h-[48px] min-w-[12ch] flex-1 border-0 bg-transparent px-3 py-2 outline-0 placeholder:font-manrope placeholder:text-[16px] placeholder:font-medium placeholder:text-[#181433]/20 sm:min-h-0 sm:py-0"
             />
-            <Button name={"Subscribe"} classname="" />
+            <div className="flex min-h-[48px] shrink-0 items-center justify-center px-2 py-2 sm:min-h-0 sm:px-1 sm:py-0">
+              <Button name={"Subscribe"} classname="" />
+            </div>
           </div>
-          <p className="font-manrope text-[16px] font-medium text-[#181433] opacity-50 w-[300px]">
+          <p className="max-w-sm font-manrope text-[16px] font-medium leading-relaxed text-[#181433]/50">
             * Will send you weekly updates for your better tour packages.
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-3 px-[200px] w-full pb-4">
-        <hr className="h-[2px] w-full bg-[#E5E5EA]" />
-        <p className="text-[#181433] text-[16px] font-manrope font-medium text-center">
-          Copyright @ CODEIT 2025. All Rights Reserved.
+      <div className="mx-auto w-full max-w-7xl px-6 pb-8 pt-2 sm:px-10">
+        <hr className="h-px w-full border-0 bg-[#E5E5EA]" />
+        <p className="pt-4 text-center font-manrope text-[16px] font-medium text-[#181433]">
+          Copyright @ CODEIT 2026. All Rights Reserved.
         </p>
       </div>
     </div>

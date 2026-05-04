@@ -1,30 +1,30 @@
-import image from "../assets/hero2.jpg";
+import { galleryMosaic } from "../data/siteContent";
 
 const Gallery = () => {
+  const [a, b, c, d, e, f, g] = galleryMosaic;
   return (
     <div className="flex flex-col gap-4">
-      {/* Grid */}
-      <div className="grid grid-cols-3 w-full gap-3">
+      <div className="grid w-full grid-cols-3 gap-3">
         <div className="col-span-1">
-          <img src={image} alt="" className="w-full h-[244px] object-cover" />
+          <img src={a} alt="" className="h-[244px] w-full object-cover" />
         </div>
         <div className="col-span-2 row-span-3">
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <img src={b} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="col-span-1 h-[244px]">
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <img src={c} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="col-span-1 h-[244px]">
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <img src={d} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="col-span-2 h-[244px]">
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <img src={e} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="col-span-1 h-[244px]">
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <img src={f} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="col-span-3 h-[244px]">
-          <img src={image} alt="" className="w-full h-full object-cover" />
+          <img src={g} alt="" className="h-full w-full object-cover" />
         </div>
       </div>
     </div>

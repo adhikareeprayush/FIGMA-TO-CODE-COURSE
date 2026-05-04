@@ -1,32 +1,22 @@
 import heroImg from "../assets/about/hero.jpg";
-const ReusableHero = (subTitle, title) => {
+
+const ReusableHero = ({ subTitle = "Read", title = "About Us" }) => {
   return (
-    <div className="h-[80vh] relative w-full overflow-hidden -z-10">
-      {subTitle && title ? (
-        <div className="absolute flex items-center justify-center flex-col gap-2 z-100 h-full w-full">
-          <span className="font-poppins text-[18px] font-bold uppercase text-[#FFEFEC]">
-            {subTitle ? subTitle : "Read"}
-          </span>
-          <h1 className="font-Yesteryear text-white text-[158px] leading-[223px] font-normal">
-            {title ? title : "About Us"}
-          </h1>
-        </div>
-      ) : (
-        <div className="absolute flex items-center justify-center flex-col gap-2 z-100 h-full w-full">
-          <span className="font-poppins text-[18px] font-bold uppercase text-[#FFEFEC]">
-            Read
-          </span>
-          <h1 className="font-Yesteryear text-white text-[158px] leading-[223px] font-normal">
-            About Us
-          </h1>
-        </div>
-      )}
+    <div className="relative isolate z-0 h-[50vh] min-h-[280px] w-full overflow-hidden sm:h-[60vh] lg:h-[80vh]">
       <img
         src={heroImg}
         alt=""
-        className="absolute h-full w-full object-cover -z-10  brightness-70"
+        className="absolute inset-0 z-0 h-full w-full object-cover brightness-[0.65]"
+        aria-hidden
       />
-      {/* https://github.com/adhikareeprayush/FIGMA-TO-CODE-COURSE */}
+      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-2 px-4 text-center">
+        <span className="font-poppins text-sm font-bold uppercase tracking-wide text-[#FFEFEC] sm:text-[18px]">
+          {subTitle}
+        </span>
+        <h1 className="font-Yesteryear text-5xl font-normal leading-none text-white sm:text-7xl md:text-8xl lg:text-[120px] lg:leading-[1.05] xl:text-[158px] xl:leading-[223px]">
+          {title}
+        </h1>
+      </div>
     </div>
   );
 };

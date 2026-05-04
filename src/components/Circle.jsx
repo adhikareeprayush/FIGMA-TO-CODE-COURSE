@@ -1,16 +1,18 @@
-const Circle = ({ classname, variant = "image" }) => {
+import defaultAvatar from "../assets/testimonials/photo.jpg";
+
+const Circle = ({ classname, variant = "image", src = defaultAvatar }) => {
   return (
     <div
-      className={`h-[36px] w-[36px] bg-white rounded-full border-[2px] border-white flex items-center justify-center shrink-0 absolute transform top-1/2 -translate-y-1/2 ${classname}`}
+      className={`absolute top-1/2 flex h-9 w-9 shrink-0 -translate-y-1/2 transform items-center justify-center rounded-full border-2 border-white bg-white ${classname}`}
     >
       {variant === "image" ? (
         <img
-          src="https://images.unsplash.com/photo-1554126807-6b10f6f6692a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={src}
           alt=""
-          className="w-full h-full object-cover rounded-full"
+          className="h-full w-full rounded-full object-cover"
         />
       ) : (
-        <div className="flex w-full bg-primary items-center justify-center text-white h-full rounded-full">
+        <div className="flex h-full w-full items-center justify-center rounded-full bg-primary text-white">
           +
         </div>
       )}

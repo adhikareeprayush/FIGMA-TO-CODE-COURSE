@@ -1,13 +1,14 @@
 @import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/pagination";
+@import "swiper/css/navigation";
 
 @theme {
   --color-primary: #df6951;
-  --font-poppins: "Poppins";
-  --font-volkhov: "Volkhov";
-  --font-manrope: "Manrope";
-  --font-Yesteryear: "Yesteryear";
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-volkhov: "Volkhov", ui-serif, Georgia, serif;
+  --font-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-Yesteryear: "Yesteryear", cursive;
 }
 
 body {

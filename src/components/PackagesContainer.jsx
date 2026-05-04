@@ -1,29 +1,14 @@
 import TravelCard from "./TravelCard";
+import { tourPackages } from "../data/siteContent";
 
 const PackagesContainer = () => {
   return (
     <div className="grid grid-cols-2">
-      <div className="col-span-1">
-        <TravelCard type={1} />
-      </div>
-      <div className="col-span-1">
-        <TravelCard type={2} />
-      </div>
-      <div className="col-span-1">
-        <TravelCard type={2} />
-      </div>
-      <div className="col-span-1">
-        <TravelCard type={2} />
-      </div>
-      <div className="col-span-1">
-        <TravelCard type={2} />
-      </div>
-      <div className="col-span-1">
-        <TravelCard type={2} />
-      </div>
-      <div className="col-span-1">
-        <TravelCard type={2} />
-      </div>
+      {tourPackages.map((tour) => (
+        <div key={tour.id} className="col-span-1">
+          <TravelCard tour={tour} featured={tour.featured} />
+        </div>
+      ))}
     </div>
   );
 };

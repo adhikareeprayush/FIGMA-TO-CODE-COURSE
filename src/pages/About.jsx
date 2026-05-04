@@ -10,6 +10,8 @@ import one from "../assets/about/1.svg";
 import two from "../assets/about/2.svg";
 import three from "../assets/about/3.svg";
 import Teestimonials from "../components/Teestimonials";
+import { aboutDestinationGrid } from "../data/siteContent";
+
 const About = () => {
   return (
     <>
@@ -22,11 +24,11 @@ const About = () => {
           <h2 className="text-[#181E4B] font-volkhov font-bold text-[50px] capitalize leading-[50px]">
             We Provide You Best <br /> Europe Sightseeing Tours
           </h2>
-          <p className="text-[16px] text-black font-poppins w-[580px]">
-            Et labore harum non nobis ipsum eum molestias mollitia et corporis
-            praesentium a laudantium internos. Non quis eius quo eligendi
-            corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut
-            ducimus illum aut optio quibusdam!
+          <p className="text-[16px] text-black font-poppins w-[580px] max-w-full">
+            Wanderlust curates small-group departures across Europe, Asia, and
+            the Americas. We negotiate directly with boutique hotels, mountain
+            guides, and local hosts so every itinerary feels personal—not
+            pulled from a template.
           </p>
           <Button name={"View Packages"} classname="w-fit" />
         </div>
@@ -113,172 +115,27 @@ const About = () => {
             Our International Packages
           </h2>
         </div>
-        <div className="grid grid-cols-4 gap-[20px]">
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
+        <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+          {aboutDestinationGrid.map((cell, idx) => (
+            <div
+              key={`${cell.city}-${idx}`}
+              className="relative h-[280px] overflow-hidden rounded-lg sm:h-[320px] lg:h-[363px]"
+            >
+              <img
+                src={cell.image}
+                alt=""
+                className="h-full w-full object-cover brightness-75 transition duration-300 hover:brightness-90"
+              />
+              <div className="absolute bottom-0 flex w-full items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-3 py-4 sm:px-4">
+                <h6 className="font-poppins text-lg font-semibold text-white sm:text-[22px]">
+                  {cell.city}
+                </h6>
+                <h6 className="font-poppins text-lg font-semibold text-white sm:text-[22px]">
+                  {cell.price}
+                </h6>
+              </div>
             </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 row-span-2 relative h-[]">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
-          <div className="col-span-1 h-[363px] relative">
-            <img
-              src={section3Img}
-              alt=""
-              className="w-full h-full object-cover brightness-75"
-            />
-            <div className="absolute bottom-0 flex items-center justify-between w-full px-4">
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                Barcelona
-              </h6>
-              <h6 className="text-white font-poppins font-semibold text-[22px]">
-                $840
-              </h6>
-            </div>
-          </div>
+          ))}
         </div>
       </Section>
       <Teestimonials />

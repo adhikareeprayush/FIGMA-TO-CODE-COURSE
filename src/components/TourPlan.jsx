@@ -1,5 +1,3 @@
-import star from "../assets/trendy/star_fill.svg";
-import image from "../assets/hero2.jpg";
 const TourPlan = () => {
   return (
     <>

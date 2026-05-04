@@ -1,10 +1,6 @@
 import Button from "./Button";
 import img1 from "../assets/views/1.jpg";
 import innerImage from "../assets/packages/inner.jpg";
-import bg from "../assets/packages/bg.svg";
-import image0 from "../assets/packages/0.jpg";
-import image1 from "../assets/packages/1.jpg";
-import image2 from "../assets/packages/2.jpg";
 import Section from "./Section";
 
 const Views = () => {

@@ -1,30 +1,18 @@
 import { useState } from "react";
 import ReusableHero from "../components/ReusableHero";
-import Information from "../components/Information";
 import image from "../assets/hero2.jpg";
 import person from "../assets/information/person.svg";
 import Button from "../components/Button";
 import TourPlan from "../components/TourPlan";
 import Location from "../components/Location";
 import Gallery from "../components/Gallery";
+import Information from "../components/Information";
 
 const tabs = [
-  {
-    id: 1,
-    label: "Information",
-  },
-  {
-    id: 2,
-    label: "Tour Plan",
-  },
-  {
-    id: 3,
-    label: "Location",
-  },
-  {
-    id: 4,
-    label: "Gallery",
-  },
+  { id: 1, label: "Information" },
+  { id: 2, label: "Tour Plan" },
+  { id: 3, label: "Location" },
+  { id: 4, label: "Gallery" },
 ];
 
 const TourInfo = () => {
@@ -35,14 +23,15 @@ const TourInfo = () => {
   return (
     <>
       <ReusableHero subTitle="Explore" title="Landscapes" />
-      <div className="w-full px-[200px]">
-        <div className="-mt-5 bg-white shadow-lg pb-6">
-          <div className="grid grid-cols-4 font-poppins font-bold text-[#343434] text-[20px] h-[80px] mb-6">
+      <div className="relative z-10 w-full px-4 pb-12 sm:px-6 lg:px-10 xl:px-16 2xl:px-[200px]">
+        <div className="-mt-5 bg-white pb-6 shadow-lg">
+          <div className="grid grid-cols-2 font-poppins text-sm font-bold text-[#343434] sm:grid-cols-4 sm:text-lg lg:text-[20px]">
             {tabs.map((tab) => (
               <button
+                type="button"
                 onClick={() => handleTabChange(tab.id)}
                 key={tab.id}
-                className={`h-full text-center ${
+                className={`min-h-[64px] px-2 py-3 text-center leading-snug sm:h-20 sm:px-4 ${
                   activeMenu == tab.id ? "bg-transparent" : "bg-[#F8F8F8]"
                 }`}
               >
@@ -50,8 +39,8 @@ const TourInfo = () => {
               </button>
             ))}
           </div>
-          <div className="w-full grid grid-cols-5 px-10 gap-3">
-            <div className="col-span-3 flex flex-col gap-5 relative">
+          <div className="grid w-full grid-cols-1 gap-6 px-4 py-4 lg:grid-cols-5 lg:gap-3 lg:px-10">
+            <div className="relative flex flex-col gap-5 lg:col-span-3">
               {activeMenu == 1 ? (
                 <Information />
               ) : activeMenu == 2 ? (
@@ -62,67 +51,67 @@ const TourInfo = () => {
                 <Gallery />
               )}
             </div>
-            <div className="col-span-2 flex flex-col gap-5">
-              <div className="flex flex-col w-full bg-[#EDEDED] px-[50px] py-[40px] gap-4">
+            <div className="flex flex-col gap-5 lg:col-span-2">
+              <div className="flex w-full flex-col gap-4 bg-[#EDEDED] px-6 py-8 sm:px-10 sm:py-10 lg:px-[50px] lg:py-[40px]">
                 <div className="flex flex-col gap-1">
-                  <h4 className="text-[#181E4B] text-[42px] font-volkhov font-bold text-center">
+                  <h4 className="text-center font-volkhov text-3xl font-bold text-[#181E4B] sm:text-[42px]">
                     Book This Tour
                   </h4>
-                  <p className="font-poppins text-[16px] text-center">
+                  <p className="text-center font-poppins text-[16px]">
                     Ex optio sequi et quos praesentium in nostrum labore nam
                     rerum iusto aut magni nesciunt? Quo quidem neque iste
                     expedita est dolo.
                   </p>
                 </div>
-                <form className="flex flex-col gap-3 items-center">
-                  <div className="flex items-center bg-white w-full py-4 px-3 gap-3">
-                    <img src={person} alt="" className="size-7" />
+                <form className="flex flex-col items-center gap-3">
+                  <div className="flex w-full items-center gap-3 bg-white px-3 py-4">
+                    <img src={person} alt="" className="size-7 shrink-0" />
                     <input
                       type="text"
                       name="name"
                       id="name"
                       placeholder="Full Name"
-                      className="bg-transparent text-[18px] font-poppins border-0 outline-0 flex-1 focus:border-0 text-black/50"
+                      className="flex-1 border-0 bg-transparent font-poppins text-[18px] text-black/50 outline-0 focus:border-0"
                     />
                   </div>
-                  <div className="flex items-center bg-white w-full py-4 px-3 gap-3">
-                    <img src={person} alt="" className="size-7" />
+                  <div className="flex w-full items-center gap-3 bg-white px-3 py-4">
+                    <img src={person} alt="" className="size-7 shrink-0" />
                     <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Full Name"
-                      className="bg-transparent text-[18px] font-poppins border-0 outline-0 flex-1 focus:border-0 text-black/50"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                      className="flex-1 border-0 bg-transparent font-poppins text-[18px] text-black/50 outline-0 focus:border-0"
                     />
                   </div>
-                  <div className="flex items-center bg-white w-full py-4 px-3 gap-3">
-                    <img src={person} alt="" className="size-7" />
+                  <div className="flex w-full items-center gap-3 bg-white px-3 py-4">
+                    <img src={person} alt="" className="size-7 shrink-0" />
                     <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Full Name"
-                      className="bg-transparent text-[18px] font-poppins border-0 outline-0 flex-1 focus:border-0 text-black/50"
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                      className="flex-1 border-0 bg-transparent font-poppins text-[18px] text-black/50 outline-0 focus:border-0"
                     />
                   </div>
-                  <div className="flex items-center bg-white w-full py-4 px-3 gap-3">
-                    <img src={person} alt="" className="size-7" />
+                  <div className="flex w-full items-center gap-3 bg-white px-3 py-4">
+                    <img src={person} alt="" className="size-7 shrink-0" />
                     <input
                       type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Full Name"
-                      className="bg-transparent text-[18px] font-poppins border-0 outline-0 flex-1 focus:border-0 text-black/50"
+                      name="guests"
+                      id="guests"
+                      placeholder="Guests"
+                      className="flex-1 border-0 bg-transparent font-poppins text-[18px] text-black/50 outline-0 focus:border-0"
                     />
                   </div>
-                  <div className="flex items-center bg-white w-full py-4 px-3 gap-3">
-                    <img src={person} alt="" className="size-7" />
+                  <div className="flex w-full items-center gap-3 bg-white px-3 py-4">
+                    <img src={person} alt="" className="size-7 shrink-0" />
                     <input
                       type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Full Name"
-                      className="bg-transparent text-[18px] font-poppins border-0 outline-0 flex-1 focus:border-0 text-black/50"
+                      name="notes"
+                      id="notes"
+                      placeholder="Notes"
+                      className="flex-1 border-0 bg-transparent font-poppins text-[18px] text-black/50 outline-0 focus:border-0"
                     />
                   </div>
                   <Button name={"Check Availability"} classname="w-fit" />

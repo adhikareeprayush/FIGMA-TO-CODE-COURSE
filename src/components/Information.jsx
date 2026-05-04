@@ -1,132 +1,63 @@
 import star from "../assets/trendy/star_fill.svg";
-import image from "../assets/hero2.jpg";
+import { tourInformation } from "../data/siteContent";
+
 const Information = () => {
+  const d = tourInformation;
   return (
     <>
       <div className="flex items-start gap-3">
         <div className="flex flex-col gap-1">
-          <h3 className="text-[#181E4B] font-volkhov font-bold text-[32px]">
-            Switzerland
+          <h3 className="font-volkhov text-[32px] font-bold text-[#181E4B]">
+            {d.title}
           </h3>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1">
-              <img src={star} alt="" width={24} />
-              <img src={star} alt="" width={24} />
-              <img src={star} alt="" width={24} />
-              <img src={star} alt="" width={24} />
-              <img src={star} alt="" width={24} />
+              {[1, 2, 3, 4, 5].map((i) => (
+                <img key={i} src={star} alt="" width={24} />
+              ))}
             </div>
-            <span className="text-[#5E6282] text-[16px] font-medium font-poppins">
-              (2.3k review)
+            <span className="font-poppins text-[16px] font-medium text-[#5E6282]">
+              ({d.reviewCount})
             </span>
           </div>
         </div>
         <div className="flex items-center">
-          <span className="text-[29px] text-primary font-poppins font-medium">
-            1,000 $
+          <span className="font-poppins text-[29px] font-medium text-primary">
+            {d.priceMain}
           </span>
-          <span className="text-[29px] font-poppins font-medium text-[#7D7D7D]">
+          <span className="font-poppins text-[29px] font-medium text-[#7D7D7D]">
             /
           </span>
-          <span className="text-[#7D7D7D] text-[16px] font-normal font-poppins">
-            Per Couple
+          <span className="font-poppins text-[16px] font-normal text-[#7D7D7D]">
+            {d.priceUnit}
           </span>
         </div>
       </div>
-      <p className="font-poppins text-[16px]">
-        Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut
-        magni nesciunt? Quo quidem neque iste expedita est dolor similique ut
-        quasi maxime ut deserunt autem At praesentium voluptatem aut libero
-        nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut
-        aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et
-        quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos
-        praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo
-        quidem neque iste expedita est dolor similique ut quasi maxime ut
-        deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi
-        sint ab cumque veritatis aut provident aliquam. Aut aspernatur
-        consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias
-        ut rerum suscipit et nihil deleniti.
-      </p>
-      <table className="border-separate border-spacing-8 ">
-        <tr>
-          <td className="font-poppins text-[20px] font-bold text-primary">
-            Destination
-          </td>
-          <td className="text-[16px] font-poppins text-black">
-            : Zurich, Switzerland
-          </td>
-        </tr>
-        <tr>
-          <td className="font-poppins text-[20px] font-bold text-primary">
-            Destination
-          </td>
-          <td className="text-[16px] font-poppins text-black">
-            : Zurich, Switzerland
-          </td>
-        </tr>
-        <tr>
-          <td className="font-poppins text-[20px] font-bold text-primary">
-            Destination
-          </td>
-          <td className="text-[16px] font-poppins text-black">
-            : Zurich, Switzerland
-          </td>
-        </tr>
-        <tr>
-          <td className="font-poppins text-[20px] font-bold text-primary">
-            Destination
-          </td>
-          <td className="text-[16px] font-poppins text-black">
-            : Zurich, Switzerland
-          </td>
-        </tr>
-        <tr>
-          <td className="font-poppins text-[20px] font-bold text-primary">
-            Destination
-          </td>
-          <td className="text-[16px] font-poppins text-black">
-            : Zurich, Switzerland
-          </td>
-        </tr>
-        <tr>
-          <td className="font-poppins text-[20px] font-bold text-primary">
-            Destination
-          </td>
-          <td className="text-[16px] font-poppins text-black">
-            : Zurich, Switzerland
-          </td>
-        </tr>
+      <p className="font-poppins text-[16px]">{d.body}</p>
+      <table className="border-separate border-spacing-8">
+        <tbody>
+          {d.facts.map((row) => (
+            <tr key={row.label}>
+              <td className="font-poppins text-[20px] font-bold text-primary">
+                {row.label}
+              </td>
+              <td className="font-poppins text-[16px] text-black">{row.value}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-2">
-          <h4 className="text-[#181E4B] text-[50px] font-volkhov font-bold">
-            From our gallery
+          <h4 className="font-volkhov text-[50px] font-bold text-[#181E4B]">
+            {d.galleryTitle}
           </h4>
-          <p className="font-poppins text-[16px]">
-            Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto
-            aut magni nesciunt? Quo quidem neque iste expedita est dolor
-            similique ut quasi maxime ut deserunt autem At praesentium
-            voluptatem aut libero nisi.{" "}
-          </p>
+          <p className="font-poppins text-[16px]">{d.galleryIntro}</p>
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-1 h-[160px]">
-              <img src={image} alt="" className="h-full w-full object-cover" />
-            </div>
-            <div className="col-span-1 h-[160px]">
-              <img src={image} alt="" className="h-full w-full object-cover" />
-            </div>
-            <div className="col-span-1 h-[160px]">
-              <img src={image} alt="" className="h-full w-full object-cover" />
-            </div>
-            <div className="col-span-1 h-[160px]">
-              <img src={image} alt="" className="h-full w-full object-cover" />
-            </div>
-            <div className="col-span-1 h-[160px]">
-              <img src={image} alt="" className="h-full w-full object-cover" />
-            </div>
-            <div className="col-span-1 h-[160px]">
-              <img src={image} alt="" className="h-full w-full object-cover" />
-            </div>
+            {d.galleryImages.map((img, i) => (
+              <div key={i} className="col-span-1 h-[160px]">
+                <img src={img} alt="" className="h-full w-full object-cover" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,11 +1,12 @@
-import Hero from "../Hero";
+import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import Nav from "../Nav";
-const Landing = ({ children }) => {
+
+const Landing = () => {
   return (
     <>
       <Nav />
-      {children}
+      <Outlet />
       <Footer />
     </>
   );
