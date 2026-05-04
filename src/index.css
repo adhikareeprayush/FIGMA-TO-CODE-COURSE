@@ -11,9 +11,14 @@
   --font-Yesteryear: "Yesteryear", cursive;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Circular Std", sans-serif;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 

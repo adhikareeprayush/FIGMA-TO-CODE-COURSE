@@ -1,7 +1,7 @@
 const TourPlan = () => {
   return (
     <>
-      <h3 className="text-[#181E4B] font-volkhov font-bold text-[32px]">
+      <h3 className="font-volkhov text-2xl font-bold text-[#181E4B] sm:text-[28px] md:text-[32px]">
         Tour Plan
       </h3>
       <div className="flex flex-col">
@@ -12,7 +12,7 @@ const TourPlan = () => {
               01
             </div>
           </div>
-          <div className="flex-1 px-3 flex flex-col gap-4 pb-8">
+          <div className="flex min-w-0 flex-1 flex-col gap-4 px-2 pb-8 sm:px-3">
             <div className="flex flex-col gap-2">
               <h5 className="text-[#181E4B] text-[20px] font-poppins font-semibold">
                 Day 1: Departure
@@ -38,7 +38,7 @@ const TourPlan = () => {
               01
             </div>
           </div>
-          <div className="flex-1 px-3 flex flex-col gap-4  pb-8">
+          <div className="flex min-w-0 flex-1 flex-col gap-4 px-2 pb-8 sm:px-3">
             <div className="flex flex-col gap-2">
               <h5 className="text-[#181E4B] text-[20px] font-poppins font-semibold">
                 Day 1: Departure
@@ -64,7 +64,7 @@ const TourPlan = () => {
               01
             </div>
           </div>
-          <div className="flex-1 px-3 flex flex-col gap-4  pb-8">
+          <div className="flex min-w-0 flex-1 flex-col gap-4 px-2 pb-8 sm:px-3">
             <div className="flex flex-col gap-2">
               <h5 className="text-[#181E4B] text-[20px] font-poppins font-semibold">
                 Day 1: Departure
@@ -90,7 +90,7 @@ const TourPlan = () => {
               01
             </div>
           </div>
-          <div className="flex-1 px-3 flex flex-col gap-4 pb-8">
+          <div className="flex min-w-0 flex-1 flex-col gap-4 px-2 pb-8 sm:px-3">
             <div className="flex flex-col gap-2">
               <h5 className="text-[#181E4B] text-[20px] font-poppins font-semibold">
                 Day 1: Departure
@@ -116,7 +116,7 @@ const TourPlan = () => {
               01
             </div>
           </div>
-          <div className="flex-1 px-3 flex flex-col gap-4  pb-8">
+          <div className="flex min-w-0 flex-1 flex-col gap-4 px-2 pb-8 sm:px-3">
             <div className="flex flex-col gap-2">
               <h5 className="text-[#181E4B] text-[20px] font-poppins font-semibold">
                 Day 1: Departure

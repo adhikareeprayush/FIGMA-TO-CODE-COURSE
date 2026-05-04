@@ -3,13 +3,25 @@ import { galleryMosaic } from "../data/siteContent";
 const Gallery = () => {
   const [a, b, c, d, e, f, g] = galleryMosaic;
   return (
-    <div className="flex flex-col gap-4">
-      <div className="grid w-full grid-cols-3 gap-3">
+    <div className="flex w-full min-w-0 flex-col gap-4">
+      {/* Mobile: simple stack */}
+      <div className="flex flex-col gap-3 md:hidden">
+        {[a, b, c, d, e, f, g].map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt=""
+            className="h-52 w-full rounded-lg object-cover"
+          />
+        ))}
+      </div>
+      {/* md+: original mosaic */}
+      <div className="hidden grid-cols-3 gap-3 md:grid">
         <div className="col-span-1">
           <img src={a} alt="" className="h-[244px] w-full object-cover" />
         </div>
         <div className="col-span-2 row-span-3">
-          <img src={b} alt="" className="h-full w-full object-cover" />
+          <img src={b} alt="" className="h-full min-h-[244px] w-full object-cover" />
         </div>
         <div className="col-span-1 h-[244px]">
           <img src={c} alt="" className="h-full w-full object-cover" />

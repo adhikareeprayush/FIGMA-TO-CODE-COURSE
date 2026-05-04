@@ -23,7 +23,7 @@ const Packages = () => {
   return (
     <>
       <ReusableHero subTitle="Explore" title="Landscapes" />
-      <div className="relative z-10 w-full px-4 pb-12 sm:px-6 lg:px-10 xl:px-16 2xl:px-[200px]">
+      <div className="relative z-10 w-full max-w-[100vw] overflow-x-hidden px-4 pb-12 sm:px-6 lg:px-10 xl:px-16 2xl:px-20">
         <div className="-mt-5 bg-white pb-6 shadow-lg">
           <div className="grid grid-cols-2 font-poppins text-sm font-bold text-[#343434] sm:grid-cols-4 sm:text-lg lg:text-[20px]">
             {tabs.map((tab) => (
@@ -39,8 +39,8 @@ const Packages = () => {
               </button>
             ))}
           </div>
-          <div className="grid w-full grid-cols-1 gap-6 px-4 py-4 lg:grid-cols-5 lg:gap-3 lg:px-10">
-            <div className="relative flex flex-col gap-5 lg:col-span-3">
+          <div className="grid w-full min-w-0 grid-cols-1 gap-6 px-3 py-4 sm:px-4 lg:grid-cols-5 lg:gap-3 lg:px-10">
+            <div className="relative flex min-w-0 flex-col gap-5 overflow-x-auto lg:col-span-3 lg:overflow-visible">
               {activeMenu == 1 ? (
                 <PackagesContainer />
               ) : activeMenu == 2 ? (

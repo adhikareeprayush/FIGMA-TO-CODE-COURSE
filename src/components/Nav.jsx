@@ -23,7 +23,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="absolute left-0 top-0 z-[100] flex w-full items-center justify-between px-4 pt-4 text-white sm:px-8 sm:pt-6 lg:px-12 xl:px-24 2xl:px-[200px]">
+      <nav className="absolute left-0 top-0 z-[100] flex w-full max-w-[100vw] items-center justify-between px-4 pt-4 text-white sm:px-6 sm:pt-6 md:px-8 lg:px-10 xl:px-14 2xl:px-20">
         <NavLink to="/" className="shrink-0" aria-label="Home">
           <img src={logo} alt="" className="h-8 w-auto sm:h-10" />
         </NavLink>

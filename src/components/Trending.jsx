@@ -8,17 +8,17 @@ import { trendingTours } from "../data/siteContent";
 
 const TrendingCard = ({ tour, reverse }) => {
   const rowClass = reverse
-    ? "flex-row-reverse lg:flex-col"
-    : "flex-row lg:flex-col";
+    ? "flex-col sm:flex-row-reverse lg:flex-col"
+    : "flex-col sm:flex-row lg:flex-col";
   return (
     <div
-      className={`cols-span-1 flex ${rowClass} justify-between gap-2 lg:flex-col`}
+      className={`cols-span-1 flex ${rowClass} justify-between gap-3 sm:gap-2 lg:flex-col`}
     >
-      <div className="image-container relative w-[40%] rounded-[10px] lg:w-full">
+      <div className="image-container relative w-full rounded-[10px] sm:w-[42%] lg:w-full">
         <img
           src={tour.image}
           alt=""
-          className="h-[300px] w-full rounded-[10px] object-cover"
+          className="h-56 w-full rounded-[10px] object-cover sm:h-64 md:h-72 lg:h-[300px]"
         />
         {tour.flag ? (
           <img
@@ -28,8 +28,8 @@ const TrendingCard = ({ tour, reverse }) => {
           />
         ) : null}
       </div>
-      <div className="flex max-w-[400px] flex-1 flex-col gap-3">
-        <div className="mt-[30px] flex gap-3 items-center">
+      <div className="flex min-w-0 max-w-[400px] flex-1 flex-col gap-3">
+        <div className="mt-4 flex flex-wrap gap-3 sm:mt-[30px] sm:items-center">
           <div className="flex items-center gap-2">
             <img src={calendar} alt="" className="size-5" />
             <span className="font-poppins text-[17px] capitalize text-[#7D7D7D]">
@@ -83,11 +83,11 @@ const Trending = () => {
         <span className="text-center font-semibold font-poppins text-[18px] text-primary uppercase">
           Trendy
         </span>
-        <h2 className="text-center font-volkhov text-[50px] font-bold capitalize leading-[50px] text-[#181E4B]">
+        <h2 className="text-center font-volkhov text-3xl font-bold capitalize leading-tight text-[#181E4B] sm:text-4xl md:text-5xl md:leading-tight lg:text-[50px] lg:leading-[50px]">
           Our Trending Tour <br /> Packages
         </h2>
       </div>
-      <div className="grid w-full grid-cols-1 gap-[50px] lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-[50px]">
         {trendingTours.map((tour, i) => (
           <TrendingCard key={tour.id} tour={tour} reverse={i === 1} />
         ))}

@@ -11,10 +11,10 @@ const Services = () => {
       <span className="font-semibold font-poppins text-[18px] text-primary uppercase">
         Category
       </span>
-      <h2 className="text-[#181E4B] font-volkhov font-bold text-[50px] capitalize leading-[50px]">
+      <h2 className="text-center font-volkhov text-3xl font-bold capitalize leading-tight text-[#181E4B] sm:text-4xl md:text-5xl lg:text-left lg:text-[50px] lg:leading-[50px]">
         We Offer Best Services
       </h2>
-      <div className="lg:flex grid grid-cols-2 place-items-center items-center justify-between mt-5 w-full gap-5">
+      <div className="mt-5 grid w-full grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:flex lg:flex-row lg:items-start lg:justify-between lg:gap-5">
         <ServicesCard
           img={image1}
           title={"Guided Tours"}

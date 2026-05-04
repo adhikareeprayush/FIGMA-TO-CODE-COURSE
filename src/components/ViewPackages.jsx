@@ -8,52 +8,54 @@ import Section from "./Section";
 
 const ViewPackages = () => {
   return (
-    <Section classname="grid grid-cols-1 lg:flex w-full justify-start gap-20 items-center">
-      <div className="relative w-[400px] col-span-1">
-        <div className="-z-10 left-[15px] h-[610px] w-[350px] rounded-t-full border-2 border-[#a7327a] absolute bottom-0 "></div>
+    <Section classname="flex w-full flex-col items-center gap-12 overflow-x-hidden lg:flex-row lg:items-center lg:justify-start lg:gap-20">
+      <div className="relative mx-auto w-full max-w-[min(100%,380px)] shrink-0 px-2 sm:max-w-[400px]">
+        <div className="absolute bottom-0 left-[8px] -z-10 h-[min(70vh,610px)] w-[min(88%,350px)] rounded-t-full border-2 border-[#a7327a] sm:left-[15px]" />
         <img
           src={innerImage}
           alt=""
-          className="h-[600px] w-[350px] rounded-t-full object-cover"
+          className="mx-auto h-[min(70vh,600px)] w-full max-w-[350px] rounded-t-full object-cover"
         />
-        <h3 className="font-poppins text-[40px] font-bold text-black opacity-10 absolute w-fit -left-[261px] bottom-[200px] transform -rotate-90">
+        <h3 className="pointer-events-none absolute bottom-[28%] left-0 hidden origin-bottom-left -rotate-90 transform font-poppins text-3xl font-bold text-black/10 lg:block xl:text-[40px]">
           Honeymoon Packages
         </h3>
         <img
           src={bg}
           alt=""
-          className="w-[120px] h-[160px] object-fit absolute -z-10 -right-[50px] -bottom-[50px]"
+          className="absolute -bottom-8 -right-4 -z-10 h-28 w-24 object-contain sm:-bottom-[50px] sm:-right-[50px] sm:h-[160px] sm:w-[120px]"
         />
         <img
           src={image1}
           alt=""
-          className=" h-[90px] w-[90px] rounded-full absolute object-cover top-[200px] -left-[100px]"
+          className="absolute left-0 top-[38%] h-16 w-16 rounded-full object-cover sm:-left-[60px] sm:top-[200px] sm:h-[90px] sm:w-[90px] lg:-left-[100px]"
         />
         <img
           src={image0}
           alt=""
-          className=" h-[140px] w-[140px] rounded-full absolute object-cover top-[0px] -left-[30px]"
+          className="absolute -left-2 top-4 h-24 w-24 rounded-full object-cover sm:-left-6 sm:top-0 sm:h-[140px] sm:w-[140px] md:-left-[30px]"
         />
         <img
           src={image2}
           alt=""
-          className=" h-[50px] w-[50px] rounded-full absolute object-cover -top-[20px] left-[120px]"
+          className="absolute -top-2 right-8 h-10 w-10 rounded-full object-cover sm:left-[120px] sm:right-auto sm:h-[50px] sm:w-[50px]"
         />
       </div>
-      <div className="col-span-1 flex flex-col gap-[20px] w-[500px] jutify-center h-full jsutify-center">
+      <div className="flex w-full min-w-0 max-w-xl flex-col gap-5 text-center lg:text-left">
         <span className="font-semibold font-poppins text-[18px] text-primary uppercase">
           Honeymoon Specials
         </span>
-        <h2 className="text-[#181E4B] font-volkhov font-bold text-[50px] capitalize leading-[50px]">
+        <h2 className="font-volkhov text-3xl font-bold capitalize leading-tight text-[#181E4B] sm:text-4xl md:text-5xl md:leading-tight lg:text-[50px] lg:leading-[50px]">
           Our Romantic Tropical Destinations
         </h2>
-        <p className="text-[16px] text-black font-poppins">
+        <p className="font-poppins text-[16px] text-black">
           Et labore harum non nobis ipsum eum molestias mollitia et corporis
           praesentium a laudantium internos. Non quis eius quo eligendi corrupti
           et fugiat nulla qui soluta recusandae in maxime quasi aut ducimus
           illum aut optio quibusdam!
         </p>
-        <Button name={"View Packages"} classname="w-fit" />
+        <div className="flex justify-center lg:justify-start">
+          <Button name={"View Packages"} classname="w-fit" />
+        </div>
       </div>
     </Section>
   );
