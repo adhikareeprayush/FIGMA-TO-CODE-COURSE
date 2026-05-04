@@ -1,5 +1,8 @@
 # Wanderlust Travel — Figma to Code
 
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/decaf914-0161-4a77-8326-53e8b5f35f7e" />
+
+
 A marketing + booking-style travel site built with **React 19**, **Vite 7**, **React Router 7**, **Tailwind CSS v4**, and **Swiper**. Includes a mock **operations dashboard** (bookings, tours, analytics) behind a simple **client-side login** (localStorage session).
 
 ## Features
