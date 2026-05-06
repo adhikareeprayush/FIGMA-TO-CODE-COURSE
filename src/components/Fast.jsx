@@ -14,7 +14,7 @@ import Section from "./Section";
 
 const Fast = () => {
   return (
-    <Section classname="grid w-full max-w-[100vw] grid-cols-1 gap-12 overflow-x-hidden 2xl:grid-cols-2 2xl:gap-0">
+    <Section classname="grid w-full max-w-[100vw] grid-cols-1 gap-12 overflow-x-clip 2xl:grid-cols-2 2xl:gap-0">
       <div className="col-span-1 flex min-w-0 flex-col gap-5">
         <div className="flex flex-col gap-3">
           <span className="font-semibold font-poppins text-[18px] text-primary uppercase">
@@ -81,9 +81,9 @@ const Fast = () => {
           </div>
         </div>
       </div>
-      <div className="relative col-span-1 flex min-h-[420px] w-full min-w-0 items-center justify-center overflow-hidden pb-8 pt-4 2xl:min-h-0 2xl:justify-center 2xl:pb-0 2xl:pt-0">
-        <div className="relative w-full max-w-[360px] px-2 sm:max-w-[380px]">
-          <div className="mx-auto flex h-auto min-h-[360px] w-full max-w-[320px] flex-col justify-between gap-3 rounded-[26px] bg-white px-4 py-4 shadow-2xl sm:h-[400px] sm:px-5 sm:py-4">
+      <div className="relative col-span-1 flex min-h-[640px] w-full min-w-0 items-center justify-center overflow-x-clip overflow-y-visible py-8 sm:min-h-[680px] sm:py-10 md:min-h-[720px] lg:min-h-[740px] 2xl:min-h-[720px] 2xl:py-12">
+        <div className="relative mx-auto w-full max-w-[400px] px-3 sm:max-w-[420px] sm:px-4">
+          <div className="mx-auto flex h-[380px] w-full max-w-[320px] flex-col justify-between gap-3 rounded-[26px] bg-white px-4 py-4 shadow-2xl sm:h-[400px] sm:px-5 sm:py-4">
             <img
               src={img5}
               alt=""
@@ -132,7 +132,7 @@ const Fast = () => {
           <img
             src={plane}
             alt=""
-            className="pointer-events-none absolute -right-[40%] -top-24 -z-20 hidden w-[min(140vw,700px)] max-w-none opacity-90 md:block lg:-right-[35%] xl:-right-[45%]"
+            className="pointer-events-none absolute -right-[8%] -top-4 -z-20 w-[min(340px,92vw)] max-w-none opacity-95 sm:-right-[12%] sm:-top-8 sm:w-[min(440px,85vw)] md:-right-[18%] md:-top-12 md:w-[min(540px,80vw)] lg:-right-[22%] lg:w-[min(620px,75vw)] xl:-right-[28%] xl:-top-16 xl:w-[min(700px,70vw)]"
           />
           <div className="relative mx-auto mt-6 w-full max-w-[300px] rounded-[18px] bg-white px-4 py-4 shadow-xl sm:absolute sm:bottom-6 sm:right-0 sm:mt-0 md:-right-8 lg:-right-12 xl:-right-24 2xl:-right-36">
             <div className="flex w-full items-center justify-start gap-3">

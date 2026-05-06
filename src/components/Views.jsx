@@ -5,7 +5,7 @@ import Section from "./Section";
 
 const Views = () => {
   return (
-    <Section classname="relative flex w-full flex-col gap-12 overflow-x-hidden xl:flex-row xl:justify-between xl:gap-8">
+    <Section classname="relative flex w-full flex-col gap-12 overflow-x-clip lg:flex-row lg:items-start lg:justify-between lg:gap-10 xl:gap-12">
       <div className="flex w-full min-w-0 flex-1 flex-col gap-8">
         <div className="flex flex-col gap-5">
           <span className="font-semibold font-poppins text-[18px] text-primary uppercase">
@@ -41,15 +41,17 @@ const Views = () => {
           ))}
         </div>
       </div>
-      <div className="relative mx-auto hidden shrink-0 xl:block xl:w-[min(40%,420px)]">
-        <div className="relative w-full max-w-[350px]">
-          <div className="absolute bottom-0 left-[10px] -z-10 h-[min(75vh,610px)] w-[min(100%,350px)] rounded-t-full border-2 border-[#a7327a]" />
+      <div className="relative mx-auto hidden w-full max-w-[380px] shrink-0 lg:block lg:max-w-none lg:w-[min(42%,440px)]">
+        <div className="relative mx-auto w-full max-w-[350px]">
+          <div className="absolute bottom-0 left-[10px] -z-10 h-[520px] w-full max-w-[350px] rounded-t-full border-2 border-[#a7327a] sm:h-[580px] md:h-[620px]" />
           <img
             src={innerImage}
             alt=""
-            className="h-[min(75vh,600px)] w-full max-w-[350px] rounded-t-full object-cover"
+            className="h-[520px] w-full max-w-[350px] rounded-t-full object-cover sm:h-[580px] md:h-[620px]"
           />
-          <h3 className="pointer-events-none absolute bottom-[25%] right-0 hidden origin-bottom-right -rotate-90 transform font-poppins text-3xl font-bold text-black/10 xl:block 2xl:text-[40px]">
+          <h3
+            className="pointer-events-none absolute bottom-32 right-3 max-h-[55%] origin-bottom-right font-poppins text-2xl font-bold leading-tight tracking-wide text-black/20 [text-orientation:mixed] [writing-mode:vertical-rl] sm:bottom-36 sm:right-4 sm:text-3xl md:bottom-40 md:text-[34px] xl:text-[40px]"
+          >
             Honeymoon Packages
           </h3>
         </div>

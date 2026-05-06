@@ -10,13 +10,15 @@ const ViewPackages = () => {
   return (
     <Section classname="flex w-full flex-col items-center gap-12 overflow-x-hidden lg:flex-row lg:items-center lg:justify-start lg:gap-20">
       <div className="relative mx-auto w-full max-w-[min(100%,380px)] shrink-0 px-2 sm:max-w-[400px]">
-        <div className="absolute bottom-0 left-[8px] -z-10 h-[min(70vh,610px)] w-[min(88%,350px)] rounded-t-full border-2 border-[#a7327a] sm:left-[15px]" />
+        <div className="absolute bottom-0 left-[8px] -z-10 h-[520px] w-[min(88%,350px)] rounded-t-full border-2 border-[#a7327a] sm:left-[15px] sm:h-[580px] md:h-[620px]" />
         <img
           src={innerImage}
           alt=""
-          className="mx-auto h-[min(70vh,600px)] w-full max-w-[350px] rounded-t-full object-cover"
+          className="mx-auto h-[520px] w-full max-w-[350px] rounded-t-full object-cover sm:h-[580px] md:h-[620px]"
         />
-        <h3 className="pointer-events-none absolute bottom-[28%] left-0 hidden origin-bottom-left -rotate-90 transform font-poppins text-3xl font-bold text-black/10 lg:block xl:text-[40px]">
+        <h3
+          className="pointer-events-none absolute bottom-32 left-3 hidden max-h-[55%] origin-bottom-left font-poppins text-2xl font-bold leading-tight tracking-wide text-black/20 [text-orientation:mixed] [writing-mode:vertical-lr] sm:bottom-36 sm:left-4 sm:text-3xl md:bottom-40 md:text-[34px] lg:block xl:text-[40px]"
+        >
           Honeymoon Packages
         </h3>
         <img
